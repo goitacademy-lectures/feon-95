@@ -14,4 +14,4 @@
 - Валідація HTML-документа
 - Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network.
 
-[Посилання на макет 🍫](https://www.figma.com/file/z6Rb84e4NKxe66QNokOWA8/Barbershop-EN?node-id=1374%3A32)
+[Посилання на макет 🍫](https://www.figma.com/file/SHNrA7r9RBXLqDUVYZjL1g/Simply-Chocolate?type=design&node-id=1%3A9&mode=design&t=foK1iyi0zXTCXHaq-1)

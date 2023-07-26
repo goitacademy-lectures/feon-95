@@ -1,0 +1,221 @@
+/**
+  |============================
+  | Base styles
+  |============================
+*/
+body {
+}
+.section {
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+
+/**
+  |============================
+  | Header styles
+  |============================
+*/
+.header {
+}
+.header-nav {
+}
+.header-socials {
+}
+.header-socials-item {
+}
+.header-socials-link {
+}
+.header-socials-icon {
+}
+
+/* Logo */
+.logo {
+}
+.logo-accent {
+}
+.logo-icon {
+}
+
+/* Navigation */
+.nav {
+}
+.nav-list {
+}
+.nav-list-item {
+}
+.nav-list-link {
+}
+
+/**
+  |============================
+  | Hero styles
+  |============================
+*/
+.hero {
+}
+.hero-title {
+}
+.hero-list {
+}
+.hero-list-item {
+}
+.hero-list-btn {
+}
+.hero-link {
+}
+/**
+  |============================
+  | Benefits styles
+  |============================
+*/
+.benefits {
+}
+.benefits-title {
+}
+.benefits-list {
+}
+.benefits-list-item {
+}
+.benefits-list-subtitle {
+}
+.benefits-list-desc {
+}
+
+/**
+  |============================
+  | Ingridients styles
+  |============================
+*/
+.ingridients {
+}
+.ingridients-title {
+}
+.ingridients-list {
+}
+.ingridients-list-item {
+}
+.ingridients-list-img {
+}
+.ingridients-list-caption {
+}
+/**
+  |============================
+  | Made styles
+  |============================
+*/
+.made {
+}
+.made-title {
+}
+.made-pic {
+}
+.made-subtitle {
+}
+.made-list {
+}
+.made-list-item {
+}
+
+/**
+  |============================
+  | Products styles
+  |============================
+*/
+.products {
+}
+.products-title {
+}
+.products-list {
+}
+.products-list-ill {
+}
+.products-list-heading {
+}
+.products-list-category {
+}
+.products-list-price {
+}
+
+/**
+  |============================
+  | Bestsellers styles
+  |============================
+*/
+.bestsellers {
+}
+.bestsellers-title {
+}
+.bestsellers-list {
+}
+.bestsellers-list-item {
+}
+.bestsellers-list-img {
+}
+.bestsellers-list-caption {
+}
+
+/**
+  |============================
+  | Reviews styles
+  |============================
+*/
+.reviews {
+}
+.reviews-title {
+}
+.reviews-list {
+}
+.reviews-list-item {
+}
+.reviews-list-avatar {
+}
+.reviews-list-author {
+}
+.reviews-list-text {
+}
+
+/**
+  |============================
+  | Footer styles
+  |============================
+*/
+.footer {
+}
+.footer-slogan {
+}
+.footer-address {
+}
+.footer-address-subject {
+}
+.footer-socials {
+}
+.footer-contatcs {
+}
+.footer-menu {
+}
+.footer-menu-item {
+}
+.footer-menu-link {
+}
+
+/* Socials */
+.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
+}
+
+/* Contacts */
+.contacts {
+}
+.contacts-item {
+}
+.contacts-link {
+}

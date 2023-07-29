@@ -1,17 +1,35 @@
+:root {
+  /* Fonts */
+  --primary-font: 'Montserrat', sans-serif;
+
+  /* Colors */
+  --primary-color: #111111;
+  --light-bg: rgba(17, 17, 17, 0.6);
+
+  /* Others */
+}
+
 /**
   |============================
   | Base styles
   |============================
 */
 body {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
 }
 .section {
 }
 .link {
+  color: currentColor;
   text-decoration: none;
 }
 .list {
   list-style: none;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
 /**
@@ -34,8 +52,13 @@ body {
 
 /* Logo */
 .logo {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
 }
 .logo-accent {
+  font-style: italic;
 }
 .logo-icon {
 }
@@ -48,6 +71,10 @@ body {
 .nav-list-item {
 }
 .nav-list-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
 }
 
 /**
@@ -56,8 +83,14 @@ body {
   |============================
 */
 .hero {
+  background-color: var(--light-bg);
 }
 .hero-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #ffffff;
 }
 .hero-list {
 }
@@ -91,6 +124,7 @@ body {
   |============================
 */
 .ingridients {
+  background-color: var(--light-bg);
 }
 .ingridients-title {
 }
@@ -126,6 +160,7 @@ body {
   |============================
 */
 .products {
+  background-color: var(--light-bg);
 }
 .products-title {
 }

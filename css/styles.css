@@ -27,7 +27,15 @@ body {
   color: var(--primary-color);
   background-color: var(--body-bg-cl);
 }
-.section {
+/* reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 .link {
   color: currentColor;
@@ -35,12 +43,46 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* Гумові картинки */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  /* Alternative */
+  /* display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; */
 }
 button {
   font-family: inherit;
   cursor: pointer;
 }
+/* reset end */
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container {
+  width: 1168px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 .section-title {
+  width: 412px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
@@ -83,7 +125,18 @@ button {
   color: var(--light-cl);
   background-color: var(--accent-cl);
 }
-
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 /**
   |============================
   | Header styles
@@ -135,9 +188,19 @@ button {
   |============================
 */
 .hero {
+  padding-bottom: 80px;
+}
+.hero-container {
+  padding: 40px;
+  padding-top: 381px;
+
   background-color: var(--light-bg-cl);
+  border-radius: 30px;
 }
 .hero-title {
+  width: 484px;
+  margin-bottom: 32px;
+
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
@@ -163,6 +226,7 @@ button {
   |============================
 */
 .benefits {
+  padding: 50px 0;
   background-color: var(--dark-bg-cl);
 }
 .benefits-title {
@@ -172,6 +236,7 @@ button {
 .benefits-list-item {
 }
 .benefits-list-subtitle {
+  margin-bottom: 18px;
   font-size: 18px;
   font-weight: 600;
   color: var(--light-cl);

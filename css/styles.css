@@ -28,6 +28,8 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-color);
   background-color: var(--body-bg-cl);
+
+  /* background-image: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E'); */
 }
 /* reset start */
 h1,
@@ -184,10 +186,18 @@ button {
   width: 40px;
   height: 40px;
 
+  color: var(--primary-cl);
+
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.1);
 }
+
+.header-socials-link:hover {
+  color: var(--accent-cl);
+  border-color: var(--beige-bg-cl);
+}
 .header-socials-icon {
+  fill: currentColor;
 }
 
 /* Logo */
@@ -243,8 +253,13 @@ button {
   padding: 40px;
   padding-top: 381px;
 
-  background-color: var(--light-bg-cl);
   border-radius: 30px;
+  background-color: var(--light-bg-cl);
+  background-image: linear-gradient(rgba(17, 17, 17, 0.4), rgba(17, 17, 17, 0.4)),
+    url('../images/hero/hero_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .hero-title {
   width: 484px;
@@ -270,11 +285,26 @@ button {
 .hero-list-btn {
 }
 .hero-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: var(--light-cl);
+}
+
+.hero-link-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: var(--light-cl);
+  border-radius: 50%;
 }
 /**
   |============================
@@ -284,6 +314,13 @@ button {
 .benefits {
   padding: 50px 0;
   background-color: var(--dark-bg-cl);
+
+  /* max-width: 1440px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url('../images/hero/people-office-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center; */
 }
 .benefits-container {
   width: 1132px;
@@ -296,6 +333,17 @@ button {
 }
 .benefits-list-item {
   flex-basis: calc((100% - 88px * 2) / 3);
+}
+.benefits-list-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .benefits-list-subtitle {
   margin-bottom: 18px;
@@ -501,8 +549,9 @@ button {
   padding: 24px;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
-  box-shadow: 0px 10px 100px 0px rgba(17, 17, 17, 0.03);
   background-color: var(--light-cl);
+
+  box-shadow: 0px 10px 100px 0px rgba(17, 17, 17, 0.03);
 }
 .reviews-list-thumb {
   margin: 0 auto;
@@ -632,4 +681,15 @@ button {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-cl);
+}
+
+.astronaut {
+  /* stars */
+  --color1: red;
+  /* astronaut */
+  --color2: lightgreen;
+}
+.astronaut:hover {
+  --color1: blueviolet;
+  --color2: hotpink;
 }

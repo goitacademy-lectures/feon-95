@@ -32,13 +32,16 @@
         <nav class="header-nav nav">
           <a class="logo link" href="./index.html">
             <span class="logo-accent">SIMPLY</span> CHOCOLATE
-            <img
+            <!-- <img
               class="logo-icon"
               src="./images/icons/logo.svg"
               alt="Simply chocolate logo"
               width="24"
               height="24"
-            />
+            /> -->
+            <svg class="logo-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-logo"></use>
+            </svg>
           </a>
           <ul class="nav-list list">
             <li class="nav-list-item">
@@ -61,13 +64,9 @@
               rel="noopener noreferrer"
               aria-label="Facebook icon"
             >
-              <img
-                class="header-socials-icon"
-                src="./images/icons/facebook-hdr.svg"
-                alt="Facebook icon"
-                width="24"
-                height="24"
-              />
+              <svg class="header-socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-facebook-hdr"></use>
+              </svg>
             </a>
           </li>
           <li class="header-socials-item">
@@ -78,13 +77,9 @@
               rel="noopener noreferrer"
               aria-label="Instagram icon"
             >
-              <img
-                class="header-socials-icon"
-                src="./images/icons/instagram-hdr.svg"
-                alt="Instagram icon"
-                width="24"
-                height="24"
-              />
+              <svg class="header-socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-instagram-hdr"></use>
+              </svg>
             </a>
           </li>
           <li class="header-socials-item">
@@ -95,13 +90,9 @@
               rel="noopener noreferrer"
               aria-label="Twitter icon"
             >
-              <img
-                class="header-socials-icon"
-                src="./images/icons/twitter-hdr.svg"
-                alt="Twitter icon"
-                width="24"
-                height="24"
-              />
+              <svg class="header-socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-twitter-hdr"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -123,7 +114,14 @@
                 <button class="hero-list-btn btn btn-light" type="button">How it’s made</button>
               </li>
             </ul>
-            <a class="hero-link link" href="#benefits">scroll down</a>
+            <a class="hero-link link" href="#benefits">
+              scroll down
+              <span class="hero-link-circle">
+                <svg class="hero-link-icon" width="22" height="22">
+                  <use href="./images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
       </section>
@@ -133,6 +131,11 @@
           <h2 class="visually-hidden">Benefits of our products</h2>
           <ul class="benefits-list list">
             <li class="benefits-list-item">
+              <div class="benefits-list-wrapper">
+                <svg class="benefits-list-icon" width="32" height="32">
+                  <use href="./images/sprite.svg#icon-chocolate"></use>
+                </svg>
+              </div>
               <h3 class="benefits-list-subtitle">Unsurpassed taste</h3>
               <p class="benefits-list-desc" id="text">
                 Crafted with the finest quality cocoa beans and a dedication to perfection, each
@@ -141,6 +144,11 @@
               </p>
             </li>
             <li class="benefits-list-item">
+              <div class="benefits-list-wrapper">
+                <svg class="benefits-list-icon" width="32" height="32">
+                  <use href="./images/sprite.svg#icon-coin"></use>
+                </svg>
+              </div>
               <h3 class="benefits-list-subtitle">Affordable price</h3>
               <p class="benefits-list-desc">
                 Indulge in high-quality chocolate without breaking the bank with Simply Chocolate's
@@ -150,6 +158,11 @@
               </p>
             </li>
             <li class="benefits-list-item">
+              <div class="benefits-list-wrapper">
+                <svg class="benefits-list-icon" width="32" height="32">
+                  <use href="./images/sprite.svg#icon-spoon"></use>
+                </svg>
+              </div>
               <h3 class="benefits-list-subtitle">Own production</h3>
               <p class="benefits-list-desc">
                 We take pride in our own production process, ensuring that every step is carefully
@@ -237,6 +250,11 @@
                 height="160"
               />
               <h3 class="ingridients-list-caption">COCONUT OIL</h3>
+            </li>
+            <li>
+              <svg class="" width="164" height="164">
+                <use href="./images/sprite.svg#icon-menu-hamburger"></use>
+              </svg>
             </li>
           </ul>
         </div>

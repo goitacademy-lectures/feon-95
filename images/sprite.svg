@@ -48,5 +48,9 @@
     <symbol id="icon-twitter" viewBox="0 0 32 32">
       <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.667 4a14.542 14.542 0 0 1-4.187 2.04 5.975 5.975 0 0 0-6.637-1.661A5.981 5.981 0 0 0 16 10.04v1.333c-2.343.061-4.665-.459-6.759-1.513S4.68 6.297 3.333 4.379c0 0-4.667 12.954 7.333 18.287a15.519 15.519 0 0 1-9.333 2.667C13.333 32 28 25.333 28 10a5.966 5.966 0 0 0-.107-1.107A10.288 10.288 0 0 0 30.666 4z" style="stroke:var(--color6, #fff)"/>
     </symbol>
+    <symbol id="modal-close" viewBox="0 0 28 28">
+      <path d="M21 7L7 21" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 7L21 21" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
   </defs>
 </svg>

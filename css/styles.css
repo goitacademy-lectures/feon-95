@@ -17,6 +17,8 @@
   /* Others */
   --items: 4;
   --indent: 32px;
+
+  --animation: 300ms ease;
 }
 
 /**
@@ -28,9 +30,24 @@ body {
   font-family: var(--primary-font);
   color: var(--primary-color);
   background-color: var(--body-bg-cl);
-
-  /* background-image: url('data:image/svg+xml,%3Csvg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="%239C92AC" fill-opacity="0.4" fill-rule="evenodd"/%3E%3C/svg%3E'); */
 }
+/* body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    display: block;
+    width: 100%;
+    height: 100vh;
+    max-height: 64vh;
+
+    background-image: url(../images/hero/people-office-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  } */
 /* reset start */
 h1,
 h2,
@@ -103,6 +120,9 @@ button {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 100px;
+
+  transition: color var(--animation), background-color var(--animation),
+    border-color var(--animation);
 }
 .btn-accent {
   background-color: var(--accent-cl);
@@ -190,16 +210,18 @@ button {
 
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.1);
+
+  transition: color 300ms ease, border-color 300ms ease;
 }
 
-.header-socials-link:hover {
+.header-socials-link:hover,
+.header-socials-link:focus {
   color: var(--accent-cl);
   border-color: var(--beige-bg-cl);
 }
 .header-socials-icon {
   fill: currentColor;
 }
-
 /* Logo */
 .logo {
   display: flex;
@@ -231,6 +253,8 @@ button {
 .nav-list-item {
 }
 .nav-list-link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -239,6 +263,21 @@ button {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.02em;
+}
+.nav-list-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.nav-list-link.current::after {
+  background-color: var(--accent-cl);
 }
 
 /**
@@ -314,13 +353,6 @@ button {
 .benefits {
   padding: 50px 0;
   background-color: var(--dark-bg-cl);
-
-  /* max-width: 1440px;
-  height: 600px;
-  margin: 0 auto;
-  background-image: url('../images/hero/people-office-1.jpg');
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 .benefits-container {
   width: 1132px;
@@ -351,6 +383,7 @@ button {
   font-weight: 600;
   color: var(--light-cl);
 }
+
 .benefits-list-desc {
   font-size: 14px;
   line-height: 1.29;
@@ -429,15 +462,29 @@ button {
   line-height: 1.33;
 }
 .made-list {
-  padding-left: 16px;
 }
 .made-list-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
 }
 .made-list-item:not(:last-child) {
   margin-bottom: 24px;
+}
+.made-list-item::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
 }
 /**
   |============================
@@ -510,7 +557,58 @@ button {
   border-radius: 15px;
   overflow: hidden;
 }
+.bestsellers-box {
+  position: relative;
+  overflow: hidden;
+}
 .bestsellers-list-img {
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+  will-change: transform;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(160deg, rgba(253, 253, 255, 0.1), rgba(8, 2, 21, 0));
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 400ms ease-in-out 250ms, transform 400ms ease-in-out 250ms;
+}
+
+.bestsellers-list-item:hover .overlay::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.bestsellers-list-item:hover .overlay {
+  transform: translateY(0);
+}
+.overlay-text {
+  color: #fafafa;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
 }
 .bestsellers-wrapper {
   padding: 28px;
@@ -650,6 +748,7 @@ button {
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: var(--light-cl);
+  transition: color 300ms ease;
 }
 .footer-menu-link:hover,
 .footer-menu-link:focus {
@@ -677,19 +776,67 @@ button {
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--light-cl);
+
+  transition: color 300ms ease;
 }
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-cl);
 }
 
-.astronaut {
-  /* stars */
-  --color1: red;
-  /* astronaut */
-  --color2: lightgreen;
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(1px);
+
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
 }
-.astronaut:hover {
-  --color1: blueviolet;
-  --color2: hotpink;
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+
+  width: 517px;
+  min-height: 794px;
+  border-radius: 15px;
+  background-color: #fafafa;
+
+  transition: transform 150ms ease-in 300ms, opacity 150ms ease-in 300ms;
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-70%);
+  opacity: 0;
+}
+.modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.modal-btn-icon {
 }

@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   /* Fonts */
   --primary-font: 'Montserrat', sans-serif;
 
@@ -31,23 +32,6 @@ body {
   color: var(--primary-color);
   background-color: var(--body-bg-cl);
 }
-/* body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    display: block;
-    width: 100%;
-    height: 100vh;
-    max-height: 64vh;
-
-    background-image: url(../images/hero/people-office-1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  } */
 /* reset start */
 h1,
 h2,
@@ -486,6 +470,7 @@ button {
   background-color: #4c4c4c;
   border: 1px solid #eceded;
 }
+
 /**
   |============================
   | Products styles
@@ -555,10 +540,10 @@ button {
 .bestsellers-list-item {
   background-color: var(--light-cl);
   border-radius: 15px;
-  overflow: hidden;
 }
 .bestsellers-box {
   position: relative;
+  border-radius: 15px 15px 0px 0px;
   overflow: hidden;
 }
 .bestsellers-list-img {
@@ -568,10 +553,6 @@ button {
   top: 0;
   left: 0;
   transform: translateY(100%);
-  transition-property: transform;
-  transition-duration: 400ms;
-  transition-timing-function: ease;
-  will-change: transform;
 
   width: 100%;
   height: 100%;
@@ -580,35 +561,36 @@ button {
   align-items: center;
   justify-content: center;
   padding: 40px;
-}
-.overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
 
   background-image: linear-gradient(160deg, rgba(253, 253, 255, 0.1), rgba(8, 2, 21, 0));
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  transform: scale(0.3);
-  transition: opacity 400ms ease-in-out 250ms, transform 400ms ease-in-out 250ms;
+  backdrop-filter: blur(0px);
+
+  transition-property: transform, backdrop-filter;
+  transition-duration: 500ms, 300ms;
+  transition-timing-function: ease;
+  transition-delay: 800ms, 0s;
 }
 
-.bestsellers-list-item:hover .overlay::before {
-  opacity: 1;
-  transform: scale(1);
-}
 .bestsellers-list-item:hover .overlay {
   transform: translateY(0);
+  backdrop-filter: blur(8px);
+  transition-delay: 0s, 500ms;
 }
 .overlay-text {
   color: #fafafa;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  filter: blur(2px);
+  opacity: 0;
+
+  transition: filter 400ms ease 0ms, opacity 400ms ease 0ms;
+}
+
+.bestsellers-list-item:hover .overlay-text {
+  filter: blur(0px);
+  opacity: 1;
+  transition-delay: 800ms;
 }
 .bestsellers-wrapper {
   padding: 28px;
@@ -683,6 +665,7 @@ button {
   display: block;
   margin: 0 auto;
 }
+
 /**
   |============================
   | Footer styles
@@ -731,6 +714,11 @@ button {
   gap: 14px;
 }
 .footer-contatcs {
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer-menu {
   display: flex;
@@ -784,6 +772,45 @@ button {
   color: var(--accent-cl);
 }
 
+/* footer form */
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-form-input {
+  width: 313px;
+  height: 52px;
+  padding: 14px 24px;
+
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--light-cl);
+
+  outline: transparent;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+
+  transition: border-color var(--animation);
+}
+.footer-form-input:focus {
+  border-color: #fd9222;
+}
+.footer-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 40px;
+}
+.footer-btn-icon {
+  fill: none;
+  stroke: var(--light-cl);
+}
+
 /**
   |============================
   | Modal window
@@ -798,7 +825,6 @@ button {
   height: 100%;
 
   background-color: rgba(17, 17, 17, 0.5);
-  backdrop-filter: blur(1px);
 
   transition: opacity 300ms ease-out, visibility 300ms ease-out;
 }
@@ -816,6 +842,8 @@ button {
 
   width: 517px;
   min-height: 794px;
+  padding: 50px;
+
   border-radius: 15px;
   background-color: #fafafa;
 
@@ -839,4 +867,27 @@ button {
   border: none;
 }
 .modal-btn-icon {
+}
+.modal-caption {
+}
+/* modal form */
+.modal-form {
+}
+.modal-form-label {
+}
+.modal-form-field {
+}
+.modal-form-input {
+}
+.modal-form-icon {
+}
+.modal-form-comment {
+}
+.modal-form-agrement {
+}
+.checkbox {
+}
+.modal-form-desc {
+}
+.modal-form-btn {
 }

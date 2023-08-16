@@ -616,17 +616,33 @@
             </div>
           </address>
         </div>
-        <ul class="footer-menu list">
-          <li class="footer-menu-item">
-            <a class="footer-menu-link link" href="#home">Home</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link link" href="#made">How it’s made?</a>
-          </li>
-          <li class="footer-menu-item">
-            <a class="footer-menu-link link" href="#reviews">Chocolate is loved</a>
-          </li>
-        </ul>
+        <div class="footer-bottom">
+          <ul class="footer-menu list">
+            <li class="footer-menu-item">
+              <a class="footer-menu-link link" href="#home">Home</a>
+            </li>
+            <li class="footer-menu-item">
+              <a class="footer-menu-link link" href="#made">How it’s made?</a>
+            </li>
+            <li class="footer-menu-item">
+              <a class="footer-menu-link link" href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+          <form class="footer-form" name="subscribe_form">
+            <input
+              class="footer-form-input"
+              name="subscribe_email"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button class="footer-btn btn btn-accent" type="submit">
+              Subscribe
+              <svg class="footer-btn-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -638,9 +654,55 @@
             <use href="./images/sprite.svg#modal-close"></use>
           </svg>
         </button>
+
+        <strong class="modal-caption">LEAVE A REVIEW ABOUT OUR CHOCOLATE</strong>
+
+        <form class="modal-form" name="review_form">
+          <label class="modal-form-label" for="user_name">Name</label>
+          <div class="modal-form-field">
+            <input class="modal-form-input" type="text" name="user_name" placeholder="" />
+            <svg class="modal-form-icon" width="24" height="24">
+              <use href="./images/sprite.svg#"></use>
+            </svg>
+          </div>
+          <label class="modal-form-label" for="user_name">Email</label>
+          <div class="modal-form-field">
+            <input class="modal-form-input" type="email" name="user_email" placeholder="" />
+            <svg class="modal-form-icon" width="24" height="24">
+              <use href="./images/sprite.svg#"></use>
+            </svg>
+          </div>
+          <label class="modal-form-label" for="user_name">Phone number</label>
+          <div class="modal-form-field">
+            <input class="modal-form-input" type="tel" name="user_phone" placeholder="" />
+            <svg class="modal-form-icon" width="24" height="24">
+              <use href="./images/sprite.svg#"></use>
+            </svg>
+          </div>
+
+          <label class="modal-form-label" for="user_comment">Comment</label>
+          <textarea
+            class="modal-form-comment"
+            name="user_comment"
+            id="user_comment"
+            rows="5"
+            placeholder="Enter text"
+          ></textarea>
+
+          <label class="modal-form-agrement">
+            <input class="checkbox" type="checkbox" name="user_agreement" />
+            <span class="modal-form-desc">
+              I accept the terms and conditions of the
+              <a href="" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            </span>
+          </label>
+
+          <button class="modal-form-btn btn btn-accent" type="submit">Send</button>
+        </form>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <!-- <script src="./js/form.js"></script> -->
   </body>
 </html>

@@ -655,28 +655,66 @@
           </svg>
         </button>
 
-        <strong class="modal-caption">LEAVE A REVIEW ABOUT OUR CHOCOLATE</strong>
+        <strong class="modal-caption">
+          LEAVE A REVIEW ABOUT <span class="modal-caption-accent">OUR CHOCOLATE</span>
+        </strong>
 
         <form class="modal-form" name="review_form">
           <label class="modal-form-label" for="user_name">Name</label>
           <div class="modal-form-field">
-            <input class="modal-form-input" type="text" name="user_name" placeholder="" />
+            <input
+              class="modal-form-input"
+              type="text"
+              name="user_name"
+              id="user_name"
+              placeholder="Jackob Mercer"
+              required
+              minlength="3"
+            />
             <svg class="modal-form-icon" width="24" height="24">
-              <use href="./images/sprite.svg#"></use>
+              <use href="./images/sprite.svg#person"></use>
+            </svg>
+            <svg class="modal-form-info" width="24" height="24">
+              <use class="error" href="./images/sprite.svg#error"></use>
+              <use class="success" href="./images/sprite.svg#success"></use>
             </svg>
           </div>
-          <label class="modal-form-label" for="user_name">Email</label>
+          <label class="modal-form-label" for="user_email">Email</label>
           <div class="modal-form-field">
-            <input class="modal-form-input" type="email" name="user_email" placeholder="" />
+            <input
+              class="modal-form-input"
+              type="email"
+              name="user_email"
+              id="user_email"
+              placeholder="example@mail.com"
+              required
+            />
             <svg class="modal-form-icon" width="24" height="24">
-              <use href="./images/sprite.svg#"></use>
+              <use href="./images/sprite.svg#email"></use>
+            </svg>
+            <svg class="modal-form-info" width="24" height="24">
+              <use class="error" href="./images/sprite.svg#error"></use>
+              <use class="success" href="./images/sprite.svg#success"></use>
             </svg>
           </div>
-          <label class="modal-form-label" for="user_name">Phone number</label>
+          <label class="modal-form-label" for="user_phone">Phone number</label>
           <div class="modal-form-field">
-            <input class="modal-form-input" type="tel" name="user_phone" placeholder="" />
+            <input
+              class="modal-form-input"
+              type="tel"
+              name="user_phone"
+              id="user_phone"
+              placeholder=" "
+              minlength="12"
+              maxlength="12"
+              required
+            />
             <svg class="modal-form-icon" width="24" height="24">
-              <use href="./images/sprite.svg#"></use>
+              <use href="./images/sprite.svg#phone"></use>
+            </svg>
+            <svg class="modal-form-info" width="24" height="24">
+              <use class="error" href="./images/sprite.svg#error"></use>
+              <use class="success" href="./images/sprite.svg#success"></use>
             </svg>
           </div>
 
@@ -687,13 +725,25 @@
             id="user_comment"
             rows="5"
             placeholder="Enter text"
+            required
+            minlength="5"
           ></textarea>
 
-          <label class="modal-form-agrement">
-            <input class="checkbox" type="checkbox" name="user_agreement" />
+          <label class="modal-form-agreement">
+            <!-- Version 1 -->
+            <input class="visually-hidden" type="checkbox" name="user_agreement" value="yes" />
+            <span class="agreement-checkbox">
+              <svg class="agrement-checkbox-icon" width="10" height="10">
+                <use href="./images/sprite.svg#check"></use>
+              </svg>
+            </span>
+            <!-- Version 1 -->
+            <!-- <input class="checkbox" type="checkbox" name="user_agreement" value="yes" /> -->
             <span class="modal-form-desc">
               I accept the terms and conditions of the
-              <a href="" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              <a class="modal-form-link" href="" target="_blank" rel="noopener noreferrer">
+                Privacy Policy
+              </a>
             </span>
           </label>
 

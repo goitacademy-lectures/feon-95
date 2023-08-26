@@ -27,7 +27,7 @@
   </head>
   <body>
     <!-- Header section -->
-    <!-- <header class="header" id="home">
+    <header class="header" id="home">
       <div class="header-container container">
         <nav class="header-nav nav">
           <a class="logo link" href="./index.html">
@@ -89,11 +89,17 @@
             </a>
           </li>
         </ul>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobile-menu-icon" width="28" height="28">
+            <use href="./images/sprite.svg#burger-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- Hero section -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment of pure delight!
@@ -117,7 +123,7 @@
             </a>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- Benefits section -->
       <section class="benefits section" id="benefits">
         <div class="benefits-container container">
@@ -306,10 +312,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-1.jpg 1x, ./images/products/img-1@2x.jpg 2x"
                 src="./images/products/img-1.jpg"
                 alt="Dark chocolate with orange"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Orange</h3>
               <p class="products-list-category">Dark chocolate</p>
@@ -318,10 +326,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-2.jpg 1x, ./images/products/img-2@2x.jpg 2x"
                 src="./images/products/img-2.jpg"
                 alt="Milk chocolate with Apple and Cranberry"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Apple&Cranberry</h3>
               <p class="products-list-category">Milk chocolate</p>
@@ -330,10 +340,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-3.jpg 1x, ./images/products/img-3@2x.jpg 2x"
                 src="./images/products/img-3.jpg"
                 alt="Dark chocolate with Limeand Sea salt"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Lime&Sea salt</h3>
               <p class="products-list-category">Dark chocolate</p>
@@ -342,10 +354,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-4.jpg 1x, ./images/products/img-4@2x.jpg 2x"
                 src="./images/products/img-4.jpg"
                 alt="Dark chocolate with Pineapple"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Pineapple</h3>
               <p class="products-list-category">Dark chocolate</p>
@@ -354,10 +368,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-5.jpg 1x, ./images/products/img-5@2x.jpg 2x"
                 src="./images/products/img-5.jpg"
                 alt="Classic Milk chocolate"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Classic</h3>
               <p class="products-list-category">Milk chocolate</p>
@@ -366,10 +382,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-6.jpg 1x, ./images/products/img-6@2x.jpg 2x"
                 src="./images/products/img-6.jpg"
                 alt="Milk chocolate with Honey"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Honey</h3>
               <p class="products-list-category">Milk chocolate</p>
@@ -378,10 +396,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-7.jpg 1x, ./images/products/img-7@2x.jpg 2x"
                 src="./images/products/img-7.jpg"
                 alt="Dark chocolate with Roasted fruits"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Roasted fruits</h3>
               <p class="products-list-category">Dark chocolate</p>
@@ -390,10 +410,12 @@
             <li class="products-list-item card-set-item">
               <img
                 class="products-list-ill"
+                srcset="./images/products/img-8.jpg 1x, ./images/products/img-8@2x.jpg 2x"
                 src="./images/products/img-8.jpg"
                 alt="Classic White chocolate"
                 width="230"
                 height="201"
+                loading="lazy"
               />
               <h3 class="products-list-heading">Classic</h3>
               <p class="products-list-category">White chocolate</p>
@@ -403,7 +425,7 @@
         </div>
       </section>
       <!-- Bestsellers section -->
-      <!-- <section class="bestsellers section">
+      <section class="bestsellers section">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="section-title-accent">Top</span> sellers
@@ -413,10 +435,12 @@
               <div class="bestsellers-box">
                 <img
                   class="bestsellers-list-img"
+                  srcset="./images/bestsellers/img-1.jpg 1x. ./images/bestsellers/img-1@2x.jpg 2x"
                   src="./images/bestsellers/img-1.jpg"
                   alt="Chocolate with nuts"
                   width="368"
                   height="464"
+                  loading="lazy"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -434,10 +458,12 @@
               <div class="bestsellers-box">
                 <img
                   class="bestsellers-list-img"
+                  srcset="./images/bestsellers/img-2.jpg 1x. ./images/bestsellers/img-2@2x.jpg 2x"
                   src="./images/bestsellers/img-2.jpg"
                   alt="Chocolate with fruits"
                   width="368"
                   height="464"
+                  loading="lazy"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -455,10 +481,12 @@
               <div class="bestsellers-box">
                 <img
                   class="bestsellers-list-img"
+                  srcset="./images/bestsellers/img-3.jpg 1x. ./images/bestsellers/img-3@2x.jpg 2x"
                   src="./images/bestsellers/img-3.jpg"
                   alt="Dark chocolate"
                   width="368"
                   height="464"
+                  loading="lazy"
                 />
                 <div class="overlay">
                   <p class="overlay-text">
@@ -474,7 +502,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Reviews section -->
       <!-- <section class="reviews section" id="reviews">
         <div class="container">
@@ -730,15 +758,12 @@
           ></textarea>
 
           <label class="modal-form-agreement">
-            <!-- Version 1 -->
             <input class="visually-hidden" type="checkbox" name="user_agreement" value="yes" />
             <span class="agreement-checkbox">
               <svg class="agrement-checkbox-icon" width="10" height="10">
                 <use href="./images/sprite.svg#check"></use>
               </svg>
             </span>
-            <!-- Version 1 -->
-            <!-- <input class="checkbox" type="checkbox" name="user_agreement" value="yes" /> -->
             <span class="modal-form-desc">
               I accept the terms and conditions of the
               <a class="modal-form-link" href="" target="_blank" rel="noopener noreferrer">
@@ -751,8 +776,88 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-close-icon" width="28" height="28">
+          <use href="./images/sprite.svg#close-menu"></use>
+        </svg>
+      </button>
 
-    <script src="./js/modal.js"></script>
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">How it’s made?</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Chocolate is loved</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-socials socials list">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Picture tag -->
+    <picture>
+      <!-- Desktop screen -->
+      <source media="(min-width: 1200px)" srcset="./desktop@1x.jpg 1x, ./desktop@2x.jpg 2x" />
+      <!-- Tablet screen -->
+      <source media="(min-width: 768px)" srcset="./tablet@1x.jpg 1x, ./tablet@2x.jpg 2x" />
+      <!-- Mobile screen -->
+      <source media="(max-width: 767px)" srcset="./mobile@1x.jpg 1x, ./mobile@2x.jpg 2x" />
+      <img src="./tablet@1x.jpg" alt="" width="400" height="500" loading="lazy" />
+    </picture>
+
+    <!-- <script src="./js/modal.js"></script> -->
     <!-- <script src="./js/form.js"></script> -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
